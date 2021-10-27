@@ -45,14 +45,7 @@ async function run() {
 
             res.json(result)
         })
-        // const services = {
-        //     "name": "ENGIN DIAGONIST",
-        //     "price": "300",
-        //     "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without",
-        //     "img": "https://i.ibb.co/f4PxHZS/going-out-employee-blue-colored-uniform-works-automobile-salon-146671-22355.jpg"
-        //   }
-        //   const result = await serviceCollection.insertOne(services);
-        //   console.log(result);
+       
     } finally {
         // await client.close();
     }
@@ -63,6 +56,10 @@ run().catch(console.dir)
 
 app.get('/', (req, res) => {
     res.send('This is Genious car mechanic server.')
+})
+
+app.get('/hello', (req, res) => {
+    res.send('hello updates here')
 })
 
 app.listen(port, (req, res) => {
